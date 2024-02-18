@@ -5,6 +5,7 @@ html{
     font-size: 1rem;
     letter-spacing: 1.6;
     color: white;
+    min-width: 100%;
     background: linear-gradient(to bottom, #380000,#050A0E );
 }
 
