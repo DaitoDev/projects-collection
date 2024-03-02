@@ -1,0 +1,216 @@
+/* CUSTOM VARIBALES  */
+:root{
+    /* Colors  */
+    --secondary-clr: hsl(14, 45%, 36%);
+    --primary-clr: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+    /* BORDER RADIUS  */
+    --br1: 1.5rem;
+    --br2: 0.5rem;
+
+}
+
+/* BASIC CSS RESET  */
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+body{
+    min-width: 320PX;
+
+    line-height: 1.8;
+    background-color: var(--eggshell);
+}
+
+h1,h2{
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--secondary-clr);
+}
+
+h1{
+    color: var(--dark-charcoal);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+h3{
+    color: var(--primary-clr);
+    font-family: "Outfit", sans-serif;
+}
+p, ol, ul, td{
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--wenge-brown);
+}
+
+/* CREATES SPACE BETWEEN BULLET POINTS AND CONTENT  */
+.li-spacer{
+    position: relative;
+    left: 10px;
+}
+
+/* BOLD SPAN  */
+.bold{
+    font-weight: 700;
+}
+
+/* Main container  */
+.recipe-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 2rem;
+
+    max-width: 800px;
+    background-color: var(--white);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--br1);
+}
+
+/* INTRO SECTION  */
+.intro-img{
+    overflow: hidden;
+    border-radius: var(--br2);
+    margin-bottom: 1rem;
+}
+
+/* PREPARATION SECTION  */
+.preparation-section {
+    min-width: 100%;
+    padding: 1.5rem;
+    border-radius: var(--br2);
+    background-color: var(--rose-white);
+}
+
+.preparation-section ul{
+    margin-left: 1.5rem;
+}
+
+/* INGREDIENTS SECTION  */
+.ingredients-section ul{
+    margin-left: 1.5rem;
+}
+
+/* INSTRUCTIONS SECTION  */
+.instructions-section{
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    padding: 1.5rem 0;
+}
+
+.instructions-section h2{
+    margin-bottom: 0.5rem;
+}
+
+.instructions-section ol li{
+    margin-left: 1.5rem;
+}
+
+/* customizing OL numbers  */
+.instructions-section ol {
+    counter-reset: list-counter;
+}
+
+.instructions-section ol li{
+    counter-increment: list-counter;
+    margin-bottom: 0.3rem;
+}
+
+.instructions-section ol li::marker{
+    color: var(--secondary-clr);
+    font-family: "outfit", sans-serif;
+    font-weight: 700;
+}
+
+
+/* NUTRITION SECTION  */
+.nutrition-section h2{
+     margin-bottom: 0.5rem;
+}
+.nutrition-section table{
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.nutrition-section table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.nutrition-section table .last-item{
+    padding: 0.5rem;
+    border: none;
+}
+
+
+.nutrition-section table .macros{
+    margin-right: 4rem;
+}
+
+.nutrition-section table .macros + td{
+    font-weight: 700;
+    color: var(--secondary-clr);
+}
+
+
+/* FOOTER ATTRIBUTES   */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+
+  @media (max-width: 810px){
+    .recipe-container{
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .intro-img{
+        border-radius: 0;
+    }
+
+    .intro-section h1,
+    .intro-section p,
+    .preparation-section,
+    .ingredients-section,
+    .instructions-section,
+    .nutrition-section{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+  }
