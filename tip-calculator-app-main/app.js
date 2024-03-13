@@ -7,6 +7,9 @@ const tipRes = document.querySelector(".tip-res");
 const tipTotal = document.querySelector(".tip-total");
 const billTotal = document.querySelector(".bill-total");
 
+const reset = document.querySelector(".reset");
+
+
 function findTip(percent, ebill) {
   let tip = (percent / 100) * ebill;
   return tip;
@@ -32,3 +35,7 @@ btn.forEach((button) => {
     displayResults(amt.toFixed(2), res.toFixed(2), finalBill.toFixed(2));
   });
 });
+
+reset.addEventListener("click", ()=> {
+  window.location.reload();
+})
