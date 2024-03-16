@@ -1,0 +1,223 @@
+@import './reset';
+@import './variables';
+
+body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 20px;
+
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: $clr-very-dark-greyblue;
+}
+
+// BACKGROUND IMG 
+.bg-img{
+    background: url('../images/bg-desktop-light.jpg');
+    height: 33vh;
+    width: 100%;
+}
+
+// MAIN APP CONTAINER 
+.app-container{
+    padding: 0.5rem;
+    max-width: 550px;
+    min-width: 320px;
+    position: absolute;
+    margin: 0 auto;
+    top: 3rem;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+// TODO HEADER 
+.todo-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1{
+        font-size: 2.3rem;
+        letter-spacing: 10px;
+        color: $clr-lightest-grey;
+    }
+}
+
+// INPUT 
+input{
+    border-radius: $br-1;
+    box-shadow: $bs-1;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: $clr-lightest-grey;
+}
+
+// UL CONTAINER 
+.ul-container{
+    border-radius: $br-1;
+    box-shadow: $bs-1;
+    background-color: $clr-lightest-grey;
+}
+
+// UL li
+ul {
+    min-height: 200px;
+
+    li{
+        padding: 1rem;
+        border-bottom: 1px solid $clr-light-grey;
+        list-style: none;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+
+        span:first-of-type{
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            border: 1px solid $clr-light-blue;
+
+            img{
+                margin-left: 6px;
+                margin-top: 7px;
+            }
+        }
+
+        span:last-of-type{
+            margin-left: auto;
+        }
+    }
+}
+
+.checked{
+    background: $clr-check-bg;
+}
+
+.striked{
+    text-decoration: line-through;
+    color: $clr-light-blue;
+}
+
+.checkSpan,
+.deleteSpan{
+    cursor: pointer;
+}
+
+    
+
+// UL FOOTER 
+.ul-footer{
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: $clr-dark-greyblue;
+}
+
+.footer-btn{
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.filter-btns,
+.filter-btns-2{
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.filter-btn{
+    transition: co
+    lor 0.3s ease;
+}
+.filter-btn:hover{
+    color: $clr-primary-blue;
+}
+
+// HIDDEN FOOTER BTN 
+.filter-btns-2{
+    display: none;
+    font-size: 14px;
+    color: $clr-dark-greyblue;
+    text-align: center;
+    background-color: $clr-lightest-grey;
+    padding: 1rem;
+    border-radius: $br-1;
+    box-shadow: $bs-1;
+}
+
+.clear-btn:hover{
+    color: $clr-primary-red;
+}
+
+// DRAG NOTE 
+.drag-note{
+    margin-top: 4rem;
+    font-size: 14px;
+    color: $clr-dark-greyblue;
+    text-align: center
+};
+
+
+
+
+
+
+
+
+
+
+
+
+// FOOTER NOTE 
+.attribution {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+      }
+  }
+
+
+//   MEDIA 
+@media (max-width: 465px) {
+
+
+
+    // UL FOOTER FILTER BTNS 
+    .ul-footer{
+
+        .filter-btns{
+            display: none;
+        }
+    }
+
+    // Reveals new filter btns on mobile 
+    .filter-btns-2{
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+    }
+
+}
